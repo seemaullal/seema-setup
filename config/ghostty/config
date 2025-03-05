@@ -1,0 +1,14 @@
+font-family = "DankMono Nerd Font Mono"
+command = /bin/zsh
+window-save-state = always
+click-repeat-interval = 500
+auto-update-channel = stable
+theme = Atom
+macos-icon="custom-style"
+macos-icon-ghost-color="#a6d5ff"
+macos-icon-screen-color="#1a1d24"
+font-size=20
+font-thicken=true
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
