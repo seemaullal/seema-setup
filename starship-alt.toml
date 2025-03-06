@@ -1,0 +1,126 @@
+format = """
+[](bg:peach fg:surface0)\
+$directory\
+[](fg:green bg:green)\
+[$git_branch](fg:base bg:green)\
+[$git_status](fg:base bg:green)\
+[](fg:green bg:teal)\
+[](fg:teal bg:blue)\
+[](fg:blue bg:purple)\
+[ ](fg:purple)"""
+
+palette = 'catppuccin_mocha'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+orange = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[os]
+disabled = true
+
+[username]
+show_always = true
+style_user = "bg:surface0 fg:text"
+style_root = "bg:surface0 fg:text"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:mantle bg:peach"
+format = "[ $path ]($style)"
+truncation_length = 1
+truncation_symbol = ""
+fish_style_pwd_dir_length = 1
+
+
+[git_branch]
+symbol = ""
+format = '$symbol $branch '
+
+[git_status]
+format = '$all_status$ahead_behind'
+ahead = '[⬆](fg:#fc9e56 bg:green) '
+behind = '[⬇](fg:#fc9e56 bg:green) '
+staged = '[✚](fg:#2979e6 bg:green) '
+deleted = '[✖](fg: pink bg:green) '
+renamed = '[➜](fg: purple bg:green) '
+stashed = '[✭](fg: cyan bg:green) '
+untracked = '[◼](fg:#6c6453 bg:green) '
+modified = '[✱](fg:blue bg:green) '
+conflicted = '[🔥](fg:yellow bg:green)'
+diverged = '[⬍](fg:yellow bg:green)'
+up_to_date = ''
+
+[nodejs]
+disabled = true
+
+[c]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[php]
+disabled = true
+
+[java]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[haskell]
+disabled = true
+
+[python]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[time]
+disabled = true
+
+[line_break]
+disabled = false
+
+[character]
+disabled = true
