@@ -1,51 +1,101 @@
-add_newline = false
+format = """
+[✨](bg:#161719 fg:blue)\
+$directory\
+[](fg:green bg:green)\
+[$git_branch](fg:mantle bg:green)\
+[$git_status](fg:mantle bg:green)\
+[](fg:green bg:teal)\
+[](fg:teal bg:blue)\
+[](fg:blue bg:purple)\
+[ ](fg:purple)"""
 
-# A minimal left prompt
-format = """$directory$character"""
+palette = 'catppuccin_mocha'
 
-# move the rest of the prompt to the right
-right_format = """$status$git_branch$git_status"""
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+orange = "#cba6f7"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+text = "#cdd6f4"
+mantle = "#181825"
 
-[character]
-success_symbol = "[❯](#ed7eae)[❯](#92e8bf)[❯](#c088fc)"
-error_symbol = "[❯](#ed7eae)[❯](#92e8bf)[❯](#c088fc)"
-vicmd_symbol = "[❮](#c088fc)[❮](#92e8bf)[❮](#ed7eae)"
+[os]
+disabled = true
 
-[git_branch]
-format = '[$branch]($style) '
-style = 'bold green'
-
-[git_status]
-format = '$all_status$ahead_behind '
-ahead = '[⬆](bold purple) '
-behind = '[⬇](bold purple) '
-staged = '[✚](green) '
-deleted = '[✖](pink) '
-renamed = '[➜](purple) '
-stashed = '[✭](cyan) '
-untracked = '[◼](#e6fff2) '
-modified = '[✱](blue) '
-conflicted = '[═](yellow) '
-diverged = '⇕ '
-up_to_date = ''
+[username]
+show_always = true
+style_user = "bg:surface0 fg:text"
+style_root = "bg:surface0 fg:text"
+format = '[ $user ]($style)'
 
 [directory]
-style = "blue"
+style = "fg:mantle bg:peach"
+format = "[ $path ]($style)"
 truncation_length = 1
 truncation_symbol = ""
 fish_style_pwd_dir_length = 1
 
-[cmd_duration]
-format = '[$duration]($style) '
 
-[line_break]
+[git_branch]
+symbol = ""
+format = '$symbol $branch '
+
+[git_status]
+format = '$all_status$ahead_behind'
+ahead = '[⬆](fg:#fc9e56 bg:green) '
+behind = '[⬇](fg:#fc9e56 bg:green) '
+staged = '[✚](fg:#2979e6 bg:green) '
+deleted = '[✖](fg: pink bg:green) '
+renamed = '[➜](fg: purple bg:green) '
+stashed = '[✭](fg: cyan bg:green) '
+untracked = '[◼](fg:#6c6453 bg:green) '
+modified = '[✱](fg:blue bg:green) '
+conflicted = '[🔥](fg:orange bg:green)'
+diverged = '[⥂](fg:#ea8cdc bg:green)'
+up_to_date = ''
+
+[nodejs]
 disabled = true
 
-[docker_context]
+[c]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[php]
+disabled = true
+
+[java]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[haskell]
 disabled = true
 
 [python]
 disabled = true
 
-[ruby]
+[docker_context]
+disabled = true
+
+[time]
+disabled = true
+
+[line_break]
+disabled = false
+
+[character]
 disabled = true
