@@ -93,7 +93,12 @@ node() { nvm && node "$@" }
 npm() { nvm && npm "$@" }
 npx() { nvm && npx "$@" }
 
+# UV
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
 
-eval "$(starship init zsh)"
+# Starship prompt (cached for faster startup)
+if [[ ! -f ~/.starship_init.zsh ]] || [[ $(which starship) -nt ~/.starship_init.zsh ]]; then
+  starship init zsh > ~/.starship_init.zsh
+fi
+source ~/.starship_init.zsh
