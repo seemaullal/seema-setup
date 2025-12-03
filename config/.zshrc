@@ -70,14 +70,16 @@ gclone() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
 
+export AOC_SESSION=redacted
+
 # Advent of Code helper
 aoc() {
-  local base_dir=~/Developer/p/advent-of-code
+  local base_dir=~/Developer/advent-of-code
   cd $base_dir || return
   [[ $# -eq 0 ]] && return
   local day=$(printf %02d $1)
   local year=${2:-$(date +'%Y')}
-  python3 aoc.py $1 $2
+  uv run aoc.py $1 $2
   cursor . -g $year/$day/solution.py
   cd $base_dir/$year/$day
 }
