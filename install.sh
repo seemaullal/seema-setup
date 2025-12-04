@@ -38,5 +38,15 @@ create_symlink "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 create_symlink "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 create_symlink "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
 
+echo ""
+echo "🔤 Installing fonts..."
+# Copy fonts to user fonts directory
+cp -f "$DOTFILES_DIR/fonts/"*.ttf ~/Library/Fonts/ 2>/dev/null || true
+cp -f "$DOTFILES_DIR/fonts/"*.otf ~/Library/Fonts/ 2>/dev/null || true
+echo "Fonts installed to ~/Library/Fonts"
+
+echo ""
 echo "✅ Dotfiles setup complete!"
 echo "Backups saved to: $BACKUP_DIR"
+echo ""
+echo "📝 Don't forget to create ~/.zshrc.local for your secrets/credentials!"
