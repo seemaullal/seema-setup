@@ -103,4 +103,4 @@ if [[ ! -f ~/.starship_init.zsh ]] || [[ $(which starship) -nt ~/.starship_init.
 fi
 source ~/.starship_init.zsh
 
- [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+ [ -f ~/.zshrc.local ] && source ~/.zshrc.local# Test comment
