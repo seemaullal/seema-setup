@@ -7,6 +7,7 @@ tap "homebrew/core"
 brew "gh"                    # GitHub CLI
 brew "git-filter-repo"       # Git history rewriting
 brew "starship"              # Cross-shell prompt
+brew "uv"                    # Fast Python package installer and resolver
 
 # GUI Applications
 cask "cursor"                # AI-powered code editor
@@ -21,8 +22,5 @@ cask "visual-studio-code"    # Code editor
 cask "whatsapp"              # Messaging app
 cask "zoom"                  # Video conferencing
 
-# Optional: Remove default Mac apps
-# Note: These require manual removal or third-party tools
-# - GarageBand
-# - iMovie
-# - etc.
+# Fonts
+cask "font-fira-code"        # Popular coding font with ligatures (optional backup)
