@@ -106,6 +106,45 @@ echo "📦 Installing apps from Brewfile..."
 brew bundle install
 
 ###############################################################################
+# Git Configuration                                                           #
+###############################################################################
+
+echo "⚙️  Configuring Git..."
+
+git config --global user.name "Seema Ullal"
+git config --global user.email "seemaullal@gmail.com"
+
+echo "Git configured with:"
+echo "  Name: $(git config --global user.name)"
+echo "  Email: $(git config --global user.email)"
+
+###############################################################################
+# Python Setup                                                                #
+###############################################################################
+
+echo "🐍 Setting up Python with uv..."
+
+if command -v uv &> /dev/null; then
+    # Install latest Python via uv
+    uv python install 3.14
+    echo "Python 3.14 installed via uv"
+else
+    echo "uv not found, skipping Python installation"
+fi
+
+###############################################################################
+# Fonts Installation                                                          #
+###############################################################################
+
+echo "🔤 Installing fonts..."
+
+# Copy fonts to user fonts directory
+cp -f fonts/*.ttf ~/Library/Fonts/ 2>/dev/null || true
+cp -f fonts/*.otf ~/Library/Fonts/ 2>/dev/null || true
+
+echo "Fonts installed to ~/Library/Fonts"
+
+###############################################################################
 # Restart affected apps                                                       #
 ###############################################################################
 
